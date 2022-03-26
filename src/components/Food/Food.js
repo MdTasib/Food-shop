@@ -1,7 +1,7 @@
 import React from "react";
 import cartIcon from "../../images/shopping-cart.png";
 
-const Food = ({ food }) => {
+const Food = ({ food, handleAddToCart }) => {
 	const { name, img, price } = food;
 
 	return (
@@ -15,8 +15,10 @@ const Food = ({ food }) => {
 					</p>
 				</div>
 				<div className='card-footer p-0'>
-					<button className='btn btn-outline-warning w-100 rounded-0 fw-bold'>
-						ADD TO CART{" "}
+					<button
+						onClick={() => handleAddToCart(food)}
+						className='btn btn-outline-warning w-100 rounded-0 fw-bold'>
+						ADD TO CART
 						<img className='ms-3' src={cartIcon} width='25' alt='' />
 					</button>
 				</div>
