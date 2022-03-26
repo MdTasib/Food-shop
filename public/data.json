@@ -1,0 +1,12 @@
+[
+	{ "id": 1, "name": "Mixed sushi set", "price": 120, "img": "https://i.ibb.co/k9YzJtk/1.png" },
+	{ "id": 2, "name": "Burger", "price": 210, "img": "https://i.ibb.co/ZVwqYKn/2.png" },
+	{ "id": 3, "name": "Delicious fried chicken", "price": 450, "img": "https://i.ibb.co/K5T2psP/3.png" },
+	{ "id": 4, "name": "Berry cherries closeup", "price": 350, "img": "https://i.ibb.co/5GWX6Yz/4.jpg" },
+	{ "id": 5, "name": "Grapes bunch fruits", "price": 180, "img": "https://i.ibb.co/27z5XH7/5.jpg" },
+	{ "id": 6, "name": "Lamb flesh rack", "price": 220, "img": "https://i.ibb.co/jr0G1x2/6.jpg" },
+	{ "id": 7, "name": "Fresh fruit", "price": 320, "img": "https://i.ibb.co/wKN1pMT/7.jpg" },
+	{ "id": 8, "name": "Broccoli vegetable", "price": 80, "img": "https://i.ibb.co/vw4zhVV/8.jpg" },
+	{ "id": 9, "name": "Oil salad vegetables", "price": 150, "img": "https://i.ibb.co/D7dTpf5/9.jpg" },
+	{ "id": 10, "name": "Fresh meal prawn", "price": 110, "img": "https://i.ibb.co/L96nnHM/10.jpg" }
+]
