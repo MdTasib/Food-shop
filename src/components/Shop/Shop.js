@@ -14,8 +14,12 @@ const Shop = () => {
 	}, []);
 
 	const handleAddToCart = food => {
-		const newSelectedFood = [...selectedFood, food];
-		setSelectedFood(newSelectedFood);
+		if (selectedFood.length > 3) {
+			return alert("You can select only 4 foods 🎂");
+		} else {
+			const newSelectedFood = [...selectedFood, food];
+			setSelectedFood(newSelectedFood);
+		}
 	};
 
 	const handleChooseFood = () => {
@@ -32,23 +36,29 @@ const Shop = () => {
 	};
 
 	return (
-		<div className='row container py-4'>
-			<div className='col-md-10'>
-				<div className='row'>
-					{foods.map(food => (
-						<Food key={food.id} food={food} handleAddToCart={handleAddToCart} />
-					))}
+		<>
+			<div className='row container py-4'>
+				<div className='col-md-10'>
+					<div className='row'>
+						{foods.map(food => (
+							<Food
+								key={food.id}
+								food={food}
+								handleAddToCart={handleAddToCart}
+							/>
+						))}
+					</div>
+				</div>
+				<div className='col-md-2 py-3'>
+					<Cart
+						selectedFood={selectedFood}
+						handleChooseFood={handleChooseFood}
+						handleSelectedAgain={handleSelectedAgain}
+						chooseFood={chooseFood}
+					/>
 				</div>
 			</div>
-			<div className='col-md-2 py-3'>
-				<Cart
-					selectedFood={selectedFood}
-					handleChooseFood={handleChooseFood}
-					handleSelectedAgain={handleSelectedAgain}
-					chooseFood={chooseFood}
-				/>
-			</div>
-		</div>
+		</>
 	);
 };
 
