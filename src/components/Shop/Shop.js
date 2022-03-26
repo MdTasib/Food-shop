@@ -5,6 +5,7 @@ import Food from "../Food/Food";
 const Shop = () => {
 	const [foods, setFoods] = useState([]);
 	const [selectedFood, setSelectedFood] = useState([]);
+	const [chooseFood, setChosseFood] = useState([]);
 
 	useEffect(() => {
 		fetch("data.json")
@@ -17,6 +18,15 @@ const Shop = () => {
 		setSelectedFood(newSelectedFood);
 	};
 
+	const handleChooseFood = () => {
+		let randomIndex = Math.round(Math.random() * selectedFood.length - 1);
+
+		if (randomIndex < 0 || randomIndex === -0) {
+			randomIndex += 1;
+		}
+		setChosseFood(selectedFood[randomIndex]);
+	};
+
 	return (
 		<div className='row container py-4'>
 			<div className='col-md-10'>
@@ -27,7 +37,11 @@ const Shop = () => {
 				</div>
 			</div>
 			<div className='col-md-2 py-3'>
-				<Cart selectedFood={selectedFood} />
+				<Cart
+					selectedFood={selectedFood}
+					handleChooseFood={handleChooseFood}
+					chooseFood={chooseFood}
+				/>
 			</div>
 		</div>
 	);
