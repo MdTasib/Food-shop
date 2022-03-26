@@ -1,6 +1,8 @@
 # FOOD SHOP
 
-## LIVE SITE - [FOOD SHOP](https://food-shopbd.netlify.app/).
+## LIVE SITE - [FOOD SHOP](https://food-shopbd.netlify.app/)
+
+[https://food-shopbd.netlify.app/](https://food-shopbd.netlify.app/)
 
 ## `FUTURE`
 
