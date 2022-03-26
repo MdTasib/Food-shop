@@ -1,7 +1,12 @@
 import React from "react";
 import deleteIcon from "../../images/delete.png";
 
-const Cart = ({ selectedFood, handleChooseFood, chooseFood }) => {
+const Cart = ({
+	selectedFood,
+	handleChooseFood,
+	chooseFood,
+	handleSelectedAgain,
+}) => {
 	return (
 		<>
 			<div className='card border-light border-3' style={{ width: "19rem" }}>
@@ -29,7 +34,9 @@ const Cart = ({ selectedFood, handleChooseFood, chooseFood }) => {
 						onClick={handleChooseFood}>
 						Chosse 1 For Me
 					</button>
-					<button className='btn btn-warning fw-bold w-100'>
+					<button
+						className='btn btn-warning fw-bold w-100'
+						onClick={handleSelectedAgain}>
 						Choose Again
 					</button>
 				</div>

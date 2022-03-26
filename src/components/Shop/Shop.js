@@ -20,11 +20,15 @@ const Shop = () => {
 
 	const handleChooseFood = () => {
 		let randomIndex = Math.round(Math.random() * selectedFood.length - 1);
-
 		if (randomIndex < 0 || randomIndex === -0) {
 			randomIndex += 1;
 		}
 		setChosseFood(selectedFood[randomIndex]);
+	};
+
+	const handleSelectedAgain = () => {
+		setSelectedFood([]);
+		setChosseFood([]);
 	};
 
 	return (
@@ -40,6 +44,7 @@ const Shop = () => {
 				<Cart
 					selectedFood={selectedFood}
 					handleChooseFood={handleChooseFood}
+					handleSelectedAgain={handleSelectedAgain}
 					chooseFood={chooseFood}
 				/>
 			</div>
